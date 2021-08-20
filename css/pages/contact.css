@@ -45,6 +45,11 @@ form .form-group label {
     letter-spacing: 1px;
 }
 
+form .form-group label span {
+    font-weight: 700;
+    color: var(--lightred);
+}
+
 form .form-group input,
 form .form-group textarea {
     margin: 5px 0;
