@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site Title & Favicon-->
+    <title>SAAC | Log In</title>
+    <link rel="shortcut icon" href="../img/favicon.svg" type="image/svg" />
+
+    <!-- Meta Viewport Set -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta Author, Description, Keywords -->
+    <meta name="author" content="SAAC JGEC" />
+    <meta name="description" content="SAAC Jalpaiguri Government Engineering College" />
+    <meta name="keywords" content="SAAC, SAAC JGEC, saacjgec, Space and Aeronautics Activity Center" />
+
+    <!-- Meta Open-Graph Set -->
+    <meta property="og:site_name" content="SAAC" />
+    <meta property="og:title" content="Space and Aeronautics Activity Center" />
+    <meta property="og:description" content="SAAC Jalpaiguri Government Engineering College" />
+    <meta property="og:image" content="../img/#" />
+
+    <!-- Tab Color -->
+    <!-- Mobile -->
+    <meta name="theme-color" content="#282533" />
+    <!-- Windows -->
+    <meta name="msapplication-navbutton-color" content="#282533" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/libraries/bootstrap.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/components/style.css" />
+    <link rel="stylesheet" href="./authentication.css" />
+
+    <!-- External JS -->
+    <script defer src="../js/libraries/jquery-3.6.0.min.js"></script>
+    <script defer src="../js/libraries/bootstrap.min.js"></script>
+
+    <!-- Main JS -->
+    <script defer src="../js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="https://saac.tech/">
+                <img src="../svg/logo_light.svg" alt="Saac Logo" />
+            </a>
+
+            <button id="goBack" class="btn goBack">
+                <i class="bx bx-caret-left-circle"></i>
+                <span>Go Back</span>
+            </button>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Log In Start -->
+    <section id="login" class="auth">
+        <div class="container-fluid row p-0 m-0">
+
+            <div class="auth_img col-md-5">
+                <img src="../img/login.png" alt="Login" />
+            </div>
+
+            <div class="auth_desc col-md-7">
+                <h2>Log In</h2>
+                <div class="my-4">
+                    <h4>SAAC</h4>
+                    <p>
+                        Creating a society where students are given a platform to explore 
+                        the space and aeronautics.
+                    </p>
+                    <p>
+                        <span>Learning, Practice, Implement:</span>
+                        To see you achieve more success in reaching more of your goals with SAAC.
+                    </p>
+                </div>
+                <hr>
+                <form class="login">
+                    <div class="form-group">
+                        <label for="email">Email Id</label>
+                        <input type="email" id="email" name="Email" class="form-control" placeholder=" " required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" id="pass" name="Password" class="form-control" placeholder=" " required />
+                    </div>
+
+                    <button type="submit" class="btn btn-auth">Login</button>
+
+                    <div class="form-group">
+                        <a href="./signup.html" class="link-auth">Create Account</a>
+                        <a href="./forget.html" class="link-auth">Forget Password?</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- Log In End -->
+
+</body>
+
+</html>

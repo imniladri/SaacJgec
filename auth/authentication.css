@@ -1,0 +1,275 @@
+/* **************************** Authentication Pages Styles **************************** */
+
+body {
+    background: var(--darkwhite);
+}
+
+header {
+    position: sticky;
+}
+
+header.scrolled {
+    padding: 1.5rem 8.5rem;
+    box-shadow: none;
+}
+
+/* **************************** Authentication Image **************************** */
+
+section.auth div.auth_img {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--lightBg);
+}
+
+section.auth div.auth_img img {
+    margin: auto;
+    width: 60%;
+    height: auto;
+    transform: rotateY(-180deg);
+}
+
+/* **************************** Authentication Details **************************** */
+
+section.auth div.auth_desc {
+    padding: 4rem 10rem;
+    width: 100%;
+    height: 100%;
+}
+
+section.auth div.auth_desc h2 {
+    margin: 1rem auto 2rem;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    color: var(--darkblack);
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+section.auth div.auth_desc h4 {
+    margin: 1rem auto;
+    font-size: 2.8rem;
+    font-weight: 600;
+    font-family: "Roboto Slab", sans-serif;
+    color: var(--lightblack);
+    letter-spacing: 1px;
+}
+
+section.auth div.auth_desc p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+    color: var(--darkgrey);
+    letter-spacing: 0.5px;
+}
+
+section.auth div.auth_desc p span {
+    display: block;
+    font-weight: 700;
+    color: var(--lightblack);
+}
+
+section.auth div.auth_desc hr {
+    margin: 1rem 0;
+    width: 80%;
+    border-top: 2px solid var(--lightgrey);
+}
+
+/* **************************** Common Form Styles **************************** */
+
+form {
+    margin: auto;
+    position: relative;
+}
+
+form .form-group {
+    margin: 2rem auto;
+}
+
+form .form-group label {
+    margin: 5px auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: "Roboto Slab", sans-serif;
+    color: var(--lightblack);
+    letter-spacing: 1px;
+}
+
+form .form-group input,
+form .form-group select,
+form .form-group select option {
+    margin: 5px 0;
+    padding: 18px;
+    width: 80%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    color: var(--lightblack);
+    background: transparent;
+    border: 2px solid var(--lightgrey);
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+form .form-group input:placeholder-shown {
+    font-weight: 600;
+    color: var(--lightgrey);
+    border: 2px solid var(--lightgrey);
+}
+
+form .form-group input:focus {
+    box-shadow: none;
+    color: var(--lightblack);
+    border: 2px solid var(--lightred);
+}
+
+form .form-group input:not(:placeholder-shown):focus {
+    border: 2px solid var(--lightblue);
+}
+
+form .form-group input:not(:placeholder-shown):not(:focus) {
+    border: 2px solid var(--lightgreen);
+}
+
+form .form-group input:-webkit-autofill,
+form .form-group input:-webkit-autofill:hover,
+form .form-group input:-webkit-autofill:focus,
+form .form-group input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--lightblack);
+    box-shadow: 0 0 0 30px var(--darkwhite) inset;
+}
+
+form button.btn-auth {
+    margin: auto 0;
+    padding: 8px 22px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--darkwhite) !important;
+    background: var(--mediumviolet);
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+form button.btn-auth:hover {
+    background: var(--darkviolet);
+}
+
+form a.link-auth {
+    position: relative;
+    margin: auto;
+    margin-right: 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: var(--lightred);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+form a.link-auth::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: var(--lightred);
+    transform: scale(0, 1);
+    transform-origin: 0% 50%;
+    transition: transform 0.3s ease;
+}
+
+form a.link-auth:hover,
+form a.link-auth:active {
+    color: var(--lightviolet);
+}
+
+form a.link-auth:hover::after,
+form a.link-auth:active::after {
+    background: var(--lightviolet);
+    transform: scale(1, 1);
+}
+
+/* **************************** Sign Up Form Styles **************************** */
+
+form.signup .form-group {
+    margin: 1rem auto;
+    padding-right: 20px;
+}
+
+form.signup .form-group input,
+form.signup .form-group select {
+    width: 100%;
+}
+
+form.signup .form-group select,
+form.signup .form-group select option {
+    padding: 8px;
+    outline: none;
+}
+
+form.signup .form-group select:hover {
+    border: 2px solid var(--lightred);
+}
+
+form.signup .form-group select:focus {
+    border: 2px solid var(--lightblue);
+}
+
+form.signup .form-group select:not(:hover) {
+    border: 2px solid var(--lightgreen);
+}
+
+form.signup .form-group select option {
+    font-weight: 600;
+}
+
+form.signup button.btn-auth {
+    margin: 3rem 0 2rem;
+}
+
+/* **************************** Responsive Media **************************** */
+
+@media (max-width: 1040px) {
+    header.scrolled {
+        padding: 1.5rem 1rem;
+    }
+
+    section.auth div.auth_img img {
+        width: 80%;
+    }
+
+    section.auth div.auth_desc {
+        padding: 4rem;
+    }
+
+    form .form-group input,
+    form .form-group select,
+    form .form-group select option {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    section.auth div.auth_img {
+        display: none;
+    }
+}
+
+@media (max-width: 372px) {
+    form a.link-auth {
+        display: table;
+        margin: 2rem 0 0;
+    }
+}
+
+/* **************************** Styles End **************************** */

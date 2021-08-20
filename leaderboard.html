@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site Title & Favicon-->
+    <title>SAAC | Leaderboard</title>
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg" />
+
+    <!-- Meta Viewport Set -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta Author, Description, Keywords -->
+    <meta name="author" content="SAAC JGEC" />
+    <meta name="description" content="SAAC Jalpaiguri Government Engineering College" />
+    <meta name="keywords" content="SAAC, SAAC JGEC, saacjgec, Space and Aeronautics Activity Center" />
+
+    <!-- Meta Open-Graph Set -->
+    <meta property="og:site_name" content="SAAC" />
+    <meta property="og:title" content="Space and Aeronautics Activity Center" />
+    <meta property="og:description" content="SAAC Jalpaiguri Government Engineering College" />
+    <meta property="og:image" content="./img/#" />
+
+    <!-- Tab Color -->
+    <!-- Mobile -->
+    <meta name="theme-color" content="#282533" />
+    <!-- Windows -->
+    <meta name="msapplication-navbutton-color" content="#282533" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/libraries/bootstrap.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/components/style.css" />
+    <link rel="stylesheet" href="./css/pages/leaderboard.css" />
+
+    <!-- External JS -->
+    <script defer src="./js/libraries/jquery-3.6.0.min.js"></script>
+    <script defer src="./js/libraries/bootstrap.min.js"></script>
+
+    <!-- Main JS -->
+    <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="https://saac.tech/">
+                <img src="./svg/logo_light.svg" alt="Saac Logo" />
+            </a>
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <a href="./auth/login.html" class="btn logIn">
+                    <i class="bx bx-log-in"></i>
+                    <span>Log In</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Leaderboard Breadcrumb Start -->
+    <div class="breadcrumb">
+        <h2>Leaderboard</h2>
+        <span></span>
+        <p>Take look on our events!</p>
+    </div>
+    <!-- Leaderboard Breadcrumb End -->
+
+    <!-- Leaderboard Start -->
+    <section id="leaderboard">
+
+        <!-- Event Header -->
+        <div class="event_header">
+            <h2>Inter-College <span>Logo Designing Contest</span></h2>
+            <span class="content_divider">
+                <hr><i class="flaticon-rocket"></i>
+                <hr>
+            </span>
+        </div>
+
+        <!-- Event Positions -->
+        <div class="event_position">
+
+            <!-- 1st Position -->
+            <div class="position_card">
+                <object data="./svg/1st.svg" class="img-fluid position"></object>
+                <div class="details">
+                    <img src="./svg/1st.svg" alt="1st" />
+                    <h4>Sreemoyee Talukdar</h4>
+                    <p>Swami Vivekananda Institute of Science & Technology</p>
+                    <span class="bx bx-show" id="work_link"></span>
+                </div>
+                <div class="work" id="work_show">
+                    <img src="./img/contests/work1.jpeg" alt="1st_Work" />
+                    <span class="bx bx-x" id="work_exit"></span>
+                </div>
+            </div>
+
+            <!-- 2nd Position -->
+            <div class="position_card">
+                <object data="./svg/2nd.svg" class="img-fluid position"></object>
+                <div class="details">
+                    <img src="./svg/2nd.svg" alt="2nd" />
+                    <h4>Purna Chandra Saren</h4>
+                    <p>Govt. College of Engineering and Ceramic Technology</p>
+                    <span class="bx bx-show" id="work_link"></span>
+                </div>
+                <div class="work" id="work_show">
+                    <img src="./img/contests/work2.jpeg" alt="2nd_Work" />
+                    <span class="bx bx-x" id="work_exit"></span>
+                </div>
+            </div>
+
+            <!-- 3rd Position -->
+            <div class="position_card">
+                <object data="./svg/3rd.svg" class="img-fluid position"></object>
+                <div class="details">
+                    <img src="./svg/3rd.svg" alt="3rd" />
+                    <h4>Aniruddha Sarkar</h4>
+                    <p>Govt. College of Engineering and Ceramic Technology</p>
+                    <span class="bx bx-show" id="work_link"></span>
+                </div>
+                <div class="work" id="work_show">
+                    <img src="./img/contests/work3.jpeg" alt="3rd_Work" />
+                    <span class="bx bx-x" id="work_exit"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Leaderboard End -->
+
+    <!-- Section Divider Start -->
+    <div class="section_divider"></div>
+    <!-- Section Divider End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="footer_content mx-1">
+
+            <div class="footer_desc">
+                <img src="./svg/logo_light.svg" alt="Saac Logo" />
+                <h4>
+                    Space & Aeronautics Activity Center
+                    <br>
+                    Jalpaiguri Government Engineering College
+                </h4>
+            </div>
+
+            <div class="footer_desc mx-1">
+                <p>All Rights Reserved | Created with ❤ by SAAC</p>
+                <h6>Connect with us:</h6>
+                <div class="social_links">
+                    <a class="bx bxl-facebook" href="https://m.facebook.com/saac2020/" target="_blank"></a>
+                    <a class="bx bxl-linkedin"
+                        href="https://www.linkedin.com/company/space-and-aeronautics-activity-centre"
+                        target="_blank"></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+</body>
+
+</html>

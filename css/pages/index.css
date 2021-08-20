@@ -1,0 +1,121 @@
+/* **************************** Index/Home Page Styles **************************** */
+
+body {
+    height: 500vh;
+}
+
+/* **************************** Home Banner **************************** */
+
+section#home_banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transform: translateY(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+section#home_banner.snapScroll {
+    transform: translateY(-100%);
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.home_banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: var(--darkBg) url(../../img/space_bg.jpg) no-repeat center /
+        cover;
+}
+
+div.home_banner h2 {
+    font-size: 18rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    color: var(--darkwhite);
+    text-align: center;
+}
+
+div.home_banner h4 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--darkwhite);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    div.home_banner h2 {
+        font-size: 12rem;
+    }
+    div.home_banner h4 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 472px) {
+    div.home_banner h2 {
+        font-size: 8rem;
+    }
+    div.home_banner h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* **************************** Home Introduction **************************** */
+
+section#home_intro div.home_intro {
+    margin: 10rem auto 2rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#home_intro div.home_intro h1 {
+    margin: 2rem auto;
+    font-size: 8rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    color: var(--darkwhite);
+}
+
+section#home_intro div.home_intro h3 {
+    margin: 2rem auto;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--lightwhite);
+}
+
+section#home_intro div.home_intro h4 {
+    margin: 2rem auto;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--lightwhite);
+    letter-spacing: 1px;
+}
+
+section#home_intro div.home_intro img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
