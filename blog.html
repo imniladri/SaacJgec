@@ -3,7 +3,7 @@
 
 <head>
     <!-- Site Title & Favicon-->
-    <title>SAAC | Leaderboard</title>
+    <title>SAAC | Blogs</title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg" />
 
     <!-- Meta Viewport Set -->
@@ -37,7 +37,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/components/style.css" />
-    <link rel="stylesheet" href="./css/pages/leaderboard.css" />
+    <link rel="stylesheet" href="./css/pages/blog.css" />
 
     <!-- External JS -->
     <script defer src="./js/libraries/jquery-3.6.0.min.js"></script>
@@ -69,7 +69,7 @@
                         <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./leaderboard.html">Leaderboard</a>
+                        <a class="nav-link" href="./leaderboard.html">Leaderboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./projects.html">Projects</a>
@@ -78,7 +78,7 @@
                         <a class="nav-link" href="#">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./blog.html">Blog</a>
+                        <a class="nav-link active" href="./blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contact</a>
@@ -94,82 +94,25 @@
     </header>
     <!-- Header End -->
 
-    <!-- Leaderboard Breadcrumb Start -->
+    <!-- Blog Breadcrumb Start -->
     <div class="breadcrumb">
-        <h2>Leaderboard</h2>
+        <h2>Our Blogs</h2>
         <span></span>
-        <p>Take look on our events!</p>
+        <p>All our releases!</p>
+
+        <!-- Add Blog -->
+        <button class="btn btn-add_blog">
+            <i class="bx bxs-plus-circle"></i>
+            Add New Blog
+        </button>
     </div>
-    <!-- Leaderboard Breadcrumb End -->
+    <!-- Blog Breadcrumb End -->
 
-    <!-- Leaderboard Start -->
-    <section id="leaderboard">
-
-        <!-- Event Header -->
-        <div class="event_header">
-            <h2>Inter-College <span>Logo Designing Contest</span></h2>
-            <span class="content_divider">
-                <hr><i class="flaticon-rocket"></i>
-                <hr>
-            </span>
-        </div>
-
-        <!-- Event Positions -->
-        <div class="event_position">
-
-            <!-- 1st Position -->
-            <div class="position_card">
-                <object data="./svg/1st.svg" class="img-fluid position"></object>
-                <div class="details">
-                    <img src="./svg/1st.svg" alt="1st" />
-                    <h4>Sreemoyee Talukdar</h4>
-                    <p>Swami Vivekananda Institute of Science & Technology</p>
-                    <span class="bx bx-show" id="work_link"></span>
-                </div>
-                <div class="work" id="work_show">
-                    <img src="./img/contests/work1.jpeg" alt="1st_Work" />
-                    <span class="bx bx-x" id="work_exit"></span>
-                </div>
-            </div>
-
-            <!-- 2nd Position -->
-            <div class="position_card">
-                <object data="./svg/2nd.svg" class="img-fluid position"></object>
-                <div class="details">
-                    <img src="./svg/2nd.svg" alt="2nd" />
-                    <h4>Purna Chandra Saren</h4>
-                    <p>Govt. College of Engineering and Ceramic Technology</p>
-                    <span class="bx bx-show" id="work_link"></span>
-                </div>
-                <div class="work" id="work_show">
-                    <img src="./img/contests/work2.jpeg" alt="2nd_Work" />
-                    <span class="bx bx-x" id="work_exit"></span>
-                </div>
-            </div>
-
-            <!-- 3rd Position -->
-            <div class="position_card">
-                <object data="./svg/3rd.svg" class="img-fluid position"></object>
-                <div class="details">
-                    <img src="./svg/3rd.svg" alt="3rd" />
-                    <h4>Aniruddha Sarkar</h4>
-                    <p>Govt. College of Engineering and Ceramic Technology</p>
-                    <span class="bx bx-show" id="work_link"></span>
-                </div>
-                <div class="work" id="work_show">
-                    <img src="./img/contests/work3.jpeg" alt="3rd_Work" />
-                    <span class="bx bx-x" id="work_exit"></span>
-                </div>
-            </div>
-
-        </div>
+    <!-- Blog Start -->
+    <section id="blog">
 
     </section>
-    <!-- Leaderboard End -->
-
-    <!-- Section Divider Start -->
-    <div class="section_divider"></div>
-    <!-- Section Divider End -->
+    <!-- Blog End -->
 
     <!-- Footer Start -->
     <footer>

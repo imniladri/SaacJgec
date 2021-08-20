@@ -1,0 +1,33 @@
+/* **************************** Blog Page Styles **************************** */
+
+body {
+    background: var(--darkwhite);
+}
+
+/* **************************** Add Blog Button **************************** */
+
+button.btn-add_blog {
+    margin: 2rem auto 0;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--darkwhite) !important;
+    background: var(--mediumviolet);
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+button.btn-add_blog i {
+    font-size: 2.5rem;
+    font-weight: 400;
+    vertical-align: -0.5rem;
+}
+
+button.btn-add_blog:hover {
+    background: var(--darkviolet);
+}
+
+/* **************************** Blog Content **************************** */
+
+/* **************************** Styles End **************************** */
