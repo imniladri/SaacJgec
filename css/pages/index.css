@@ -1,27 +1,38 @@
 /* **************************** Index/Home Page Styles **************************** */
 
-body {
-    height: 500vh;
+header {
+    position: sticky;
+    background: var(--mediumBg);
 }
 
-/* **************************** Home Banner **************************** */
+header.scrolled {
+    padding: 1.5rem 8.5rem;
+    box-shadow: none;
+}
+
+footer {
+    padding: 15rem 10rem 2rem;
+}
+
+/* **************************** Home Settings **************************** */
 
 section#home_banner {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 100%;
-    z-index: 10;
     transform: translateY(0);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s linear;
 }
 
+/*
 section#home_banner.snapScroll {
     transform: translateY(-100%);
 }
+*/
 
-#particles-js {
+/* **************************** Particles JS **************************** */
+
+div#particles-js {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -29,6 +40,8 @@ section#home_banner.snapScroll {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* **************************** Home Banner **************************** */
 
 div.home_banner {
     position: relative;
@@ -48,6 +61,7 @@ div.home_banner h2 {
     font-family: "Aquire", "Poppins", sans-serif;
     color: var(--darkwhite);
     text-align: center;
+    transform: translateY(-10%);
 }
 
 div.home_banner h4 {
@@ -58,6 +72,7 @@ div.home_banner h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
+    transform: translateY(-100%);
 }
 
 @media (max-width: 992px) {
@@ -78,18 +93,84 @@ div.home_banner h4 {
     }
 }
 
+/* **************************** Mouse Wheel Scroll **************************** */
+
+div#scroll_down {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+section#home_banner.snapScroll div#scroll_down {
+    opacity: 0;
+}
+
+div#scroll_down span {
+    position: relative;
+    width: 2rem;
+    height: 3.5rem;
+    background: transparent;
+    border: 2px solid var(--lightwhite);
+    border-radius: 8px;
+}
+
+div#scroll_down span::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--lightwhite);
+    border-radius: 50%;
+    animation: wheel 1.5s linear infinite;
+}
+
+div#scroll_down p {
+    margin: 1rem auto 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: var(--lightwhite);
+}
+
+@keyframes wheel {
+    0% {
+        top: 30%;
+    }
+    25% {
+        top: 50%;
+    }
+    50% {
+        top: 70%;
+    }
+    75% {
+        top: 50%;
+    }
+    100% {
+        top: 30%;
+    }
+}
+
 /* **************************** Home Introduction **************************** */
 
 section#home_intro div.home_intro {
-    margin: 10rem auto 2rem;
+    margin: 10rem auto 5rem;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section#home_intro div.home_intro h1 {
+section#home_intro div.home_intro .item_content h1 {
     margin: 2rem auto;
     font-size: 8rem;
     font-weight: 700;
@@ -97,7 +178,7 @@ section#home_intro div.home_intro h1 {
     color: var(--darkwhite);
 }
 
-section#home_intro div.home_intro h3 {
+section#home_intro div.home_intro .item_content h3 {
     margin: 2rem auto;
     font-size: 3rem;
     font-weight: 600;
@@ -105,7 +186,7 @@ section#home_intro div.home_intro h3 {
     color: var(--lightwhite);
 }
 
-section#home_intro div.home_intro h4 {
+section#home_intro div.home_intro .item_content h4 {
     margin: 2rem auto;
     font-size: 2rem;
     font-weight: 600;
@@ -114,8 +195,134 @@ section#home_intro div.home_intro h4 {
     letter-spacing: 1px;
 }
 
-section#home_intro div.home_intro img {
+section#home_intro div.home_intro .item_content p {
+    position: relative;
+}
+
+section#home_intro div.home_intro .item_content p span {
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    color: var(--darkwhite);
+    background: var(--lightred);
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+section#home_intro div.home_intro .item_content p img {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    width: 10rem;
+    height: auto;
+}
+
+section#home_intro div.home_intro .item_figure img {
     margin: auto;
     width: 100%;
     height: auto;
 }
+
+/* **************************** Home About **************************** */
+
+section#home_about div.home_about {
+    margin: 15rem auto 5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#home_about div.home_about .item_figure {
+    position: relative;
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#home_about div.home_about .item_figure img {
+    margin: auto;
+    width: 60%;
+    height: auto;
+}
+
+section#home_about div.home_about .item_figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/space_pattern.png) fixed 50% 50% / 40%;
+    box-shadow: inset 0 0 10px 10px var(--mediumBg);
+    border-radius: 5rem;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+section#home_about div.home_about .item_content {
+    position: relative;
+    padding: 1rem 2rem;
+    padding-left: 4rem;
+}
+
+section#home_about div.home_about .item_content h4 {
+    margin: 2rem auto 4rem;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    color: var(--darkwhite);
+    text-align: left;
+}
+
+section#home_about div.home_about .item_content p {
+    margin: 2rem auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+    color: var(--lightgrey);
+    text-align: justify;
+}
+
+section#home_about div.home_about .item_content p span {
+    font-weight: 700;
+    color: var(--lightwhite);
+}
+
+section#home_about div.home_about .item_content a {
+    margin: 1rem auto;
+    padding: 0.6rem 1.6rem;
+    color: var(--darkwhite);
+    background: var(--lightred);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#home_about div.home_about .item_content a span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+section#home_about div.home_about .item_content a i {
+    margin: auto 0.2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+section#home_about div.home_about .item_content a:hover {
+    background: rgba(255, 0, 85, 0.8);
+}
+
+section#home_about div.home_about .item_content a:hover i {
+    transform: translateX(5px);
+}
+
+/* **************************** Styles End **************************** */
