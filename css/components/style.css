@@ -46,7 +46,7 @@ body {
     --darkwhite: #ffffff;
     --lightwhite: #f1f6f9;
     --lightgrey: #9ba4b4;
-    --darkgrey: #787A91;
+    --darkgrey: #787a91;
 
     --lightBg: #312e3d;
     --mediumBg: #282533;
@@ -92,6 +92,13 @@ img,
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+
+button.btn:active,
+button.btn:focus,
+a.btn:active,
+a.btn:focus {
+    box-shadow: none;
 }
 
 @font-face {
