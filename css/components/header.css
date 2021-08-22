@@ -155,7 +155,8 @@ button.navbar-toggler.showNavbar span.navbar-toggler-icon:after {
 /* **************************** Responsive Media **************************** */
 
 @media (max-width: 1240px) {
-    header {
+    header,
+    header.scrolled {
         padding: 1.5rem 2rem;
     }
 

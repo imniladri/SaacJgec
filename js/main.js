@@ -11,7 +11,7 @@ $(".nav-link").click(function () {
 // Detect Snap Scrolling
 
 $(window).scroll(function () {
-    $(this).scrollTop() > 50
+    $(this).scrollTop() > 150
         ? $("section#home_banner").addClass("snapScroll")
         : $("section#home_banner").removeClass("snapScroll");
 
