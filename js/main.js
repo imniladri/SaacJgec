@@ -1,3 +1,22 @@
+// Window Load Function
+
+$(window).on("load", function () {
+    $("#preloader").css({
+        opacity: "0.8",
+        clipPath: "circle(0% at 50% 0%)",
+    });
+    $(".loader").css({
+        opacity: "0.5",
+        top: "-10%",
+        transitionDelay: "0.3s",
+    });
+
+    // Time Out Function
+    setTimeout(() => {
+        $(".reveal").addClass("revealed");
+    }, 1000);
+});
+
 // Nav Hamburger Menu Toggle
 
 $(".navbar-toggler, .nav-link").click(function () {
