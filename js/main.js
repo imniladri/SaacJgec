@@ -2,12 +2,12 @@
 
 $(window).on("load", function () {
     $("#preloader").css({
-        opacity: "0.8",
+        opacity: "0.6",
         clipPath: "circle(0% at 50% 0%)",
     });
     $(".loader").css({
-        opacity: "0.5",
-        top: "-10%",
+        opacity: "0",
+        top: "30%",
         transitionDelay: "0.3s",
     });
 
