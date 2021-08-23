@@ -116,7 +116,7 @@ div.breadcrumb {
     flex-direction: column;
     margin: 8rem auto 4rem;
     padding: 10rem 4rem;
-    background: url(../../img/space_bg.jpg) no-repeat 50% 100% / cover;
+    background: url(../../img/space_bg.png) no-repeat 50% 100% / cover;
 }
 
 div.breadcrumb h2 {
