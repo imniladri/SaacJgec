@@ -30,14 +30,88 @@ section#_404::before {
 }
 
 div._404 {
-    margin: auto;
-    padding: 4rem;
-    width: 50rem;
-    height: 50rem;
+    margin: 5rem auto;
+    padding: 2rem 12rem;
     background: var(--lightwhite);
     border-radius: 42% 58% 63% 37% / 53% 68% 32% 47%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 1;
 }
+
+div._404 object {
+    margin: -2rem auto;
+    width: auto;
+    height: auto;
+}
+
+div._404 h4 {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--lightBg);
+    text-align: center;
+}
+
+div._404 p {
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    color: var(--lightBg);
+    text-align: center;
+}
+
+div._404 a.btn {
+    margin: 1rem auto 2rem;
+    padding: 0.8rem 1.6rem;
+    color: var(--darkwhite);
+    background: var(--lightBg);
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+div._404 a.btn span {
+    margin: auto;
+    margin-left: 2px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+}
+
+div._404 a.btn i {
+    margin: auto;
+    margin-right: 2px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+div._404 a.btn:hover {
+    background: var(--darkBg);
+}
+
+@media (max-width: 576px) {
+    div._404 {
+        margin: 1rem;
+        padding: 2rem 6rem;
+    }
+
+    div._404 h4 {
+        font-size: 2rem;
+    }
+    div._404 a span {
+        font-size: 1.4rem;
+    }
+    div._404 a i {
+        font-size: 1.6rem;
+    }
+}
+
+/* **************************** Styles End **************************** */
