@@ -456,6 +456,33 @@ section#home_about div.home_about .item_content a:hover i {
     }
 }
 
-/* **************************** Responsive Media **************************** */
+/* **************************** Home Contests **************************** */
+
+section#home_contests div.home_contests {
+    margin: 20rem auto 5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#home_contests div.home_contests h4 {
+    margin: 2rem auto 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    color: var(--darkwhite);
+    text-align: center;
+}
+
+section#home_contests div.home_contests p {
+    margin: 2rem auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+    color: var(--lightgrey);
+    text-align: center;
+}
 
 /* **************************** Styles End **************************** */
