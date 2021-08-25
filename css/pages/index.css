@@ -456,18 +456,19 @@ section#home_about div.home_about .item_content a:hover i {
     }
 }
 
-/* **************************** Home Contests **************************** */
+/* **************************** Home Contents **************************** */
 
-section#home_contests div.home_contests {
-    margin: 20rem auto 5rem;
+section#home_contents div.home_contents {
+    margin: 15rem auto 5rem;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-section#home_contests div.home_contests h4 {
+section#home_contents div.home_contents h4 {
     margin: 2rem auto 3rem;
     font-size: 4rem;
     font-weight: 700;
@@ -476,13 +477,28 @@ section#home_contests div.home_contests h4 {
     text-align: center;
 }
 
-section#home_contests div.home_contests p {
+section#home_contents div.home_contents p {
     margin: 2rem auto;
     font-size: 1.8rem;
     font-weight: 600;
     font-family: "Quicksand", sans-serif;
     color: var(--lightgrey);
     text-align: center;
+}
+
+section#home_contents div.home_contents img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    section#home_contents div.home_contents {
+        margin: 10rem auto 5rem;
+    }
+    section#home_contents div.home_contents img {
+        display: none;
+    }
 }
 
 /* **************************** Styles End **************************** */
