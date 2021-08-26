@@ -18,7 +18,7 @@ section#about div.about h3,
 section#about div.vision h3,
 section#about div.collaboration h3 {
     position: relative;
-    margin: 2rem 0 3rem;
+    margin: 2rem 1rem 3rem;
     font-size: 3.6rem;
     font-weight: 700;
     font-family: "Rubik", sans-serif;
@@ -44,7 +44,7 @@ section#about div.about p,
 section#about div.vision p,
 section#about div.collaboration p {
     margin: 1rem 0;
-    padding: 1rem 2rem 1rem 0;
+    padding: 1rem;
     font-size: 1.8rem;
     font-weight: 600;
     font-family: "Quicksand", sans-serif;
@@ -278,12 +278,6 @@ section#community div.community_content img {
 /* **************************** Responsive Media **************************** */
 
 @media (max-width: 768px) {
-    section#about div.about,
-    section#about div.vision,
-    section#about div.collaboration {
-        padding: 1rem 2rem;
-    }
-
     section#about div.about img,
     section#about div.vision img,
     section#about div.collaboration img {
