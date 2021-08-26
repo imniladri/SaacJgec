@@ -29,9 +29,8 @@ section.auth div.auth_img {
 
 section.auth div.auth_img img {
     margin: auto;
-    width: 60%;
+    width: 100%;
     height: auto;
-    transform: rotateY(-180deg);
 }
 
 /* **************************** Authentication Details **************************** */
@@ -247,10 +246,6 @@ form.signup button.btn-auth {
 @media (max-width: 1040px) {
     header.scrolled {
         padding: 1.5rem 1rem;
-    }
-
-    section.auth div.auth_img img {
-        width: 80%;
     }
 
     section.auth div.auth_desc {
