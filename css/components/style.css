@@ -158,21 +158,6 @@ div.breadcrumb p {
     }
 }
 
-/* **************************** Blockquote **************************** */
-
-blockquote {
-    margin: auto auto -2rem;
-    padding: 1rem 2rem;
-    font-size: 2rem;
-    font-weight: 400;
-    font-family: "Roboto Slab", serif;
-    color: var(--darkblack);
-    background: rgba(105, 97, 245, 0.1);
-    border-left: 4px solid rgba(105, 97, 245, 1);
-    border-radius: 0 2px 2px 0;
-    font-style: italic;
-}
-
 /* **************************** Section Divider **************************** */
 
 div.section_divider {
@@ -203,3 +188,5 @@ span.content_divider i:before {
     font-size: 35px;
     color: var(--mediumviolet);
 }
+
+/* **************************** Styles End **************************** */

@@ -60,6 +60,21 @@ section#about div.collaboration span {
     -webkit-text-stroke: 0.06rem var(--darkviolet);
 }
 
+section#about div.about blockquote,
+section#about div.vision blockquote,
+section#about div.collaboration blockquote {
+    margin: 0 0 -3rem 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Roboto Slab", serif;
+    color: var(--darkblack);
+    background: rgba(105, 97, 245, 0.1);
+    border-left: 4px solid rgba(105, 97, 245, 1);
+    border-radius: 0 2px 2px 0;
+    font-style: italic;
+}
+
 section#about div.about img,
 section#about div.vision img,
 section#about div.collaboration img {
