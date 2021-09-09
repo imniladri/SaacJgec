@@ -22,7 +22,6 @@
 ### Other Hostings:
 
 -   **[Vercel](https://saacjgec.vercel.app/)**
--   **[Netlify](https://saacjgec.netlify.app/)**
 
 <hr/>
 
