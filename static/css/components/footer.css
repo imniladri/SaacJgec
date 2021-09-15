@@ -4,8 +4,7 @@ footer {
     position: relative;
     width: 100%;
     padding: 15rem 4rem 2rem;
-    background: transparent url(../../svg/footer_wave.svg) no-repeat 50% 100% /
-        contain;
+    background: var(--mediumBg);
 }
 
 footer::before {
@@ -88,7 +87,6 @@ footer div.footer_desc .social_links a:hover {
 @media (max-width: 1240px) {
     footer {
         padding: 4rem 4rem 0;
-        background: var(--mediumBg);
     }
 }
 
