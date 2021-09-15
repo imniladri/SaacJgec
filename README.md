@@ -4,7 +4,7 @@
 
 <br/>
 
-<img align="left" width="56" alt="SAAC" src="./img/favicon.svg" />
+<img align="left" width="56" alt="SAAC" src="./static/img/favicon.svg" />
 
 <br/>
 
