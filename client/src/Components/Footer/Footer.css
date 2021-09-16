@@ -3,7 +3,7 @@
 footer {
     position: relative;
     width: 100%;
-    padding: 15rem 4rem 2rem;
+    padding: 8rem 4rem 2rem;
     background: var(--mediumBg);
 }
 
@@ -14,7 +14,7 @@ footer::before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: url(../../img/space_pattern.png); */
+    background: url(https://saacjgec.vercel.app/img/space_pattern.png);
     background-size: contain;
     opacity: 0.05;
 }
@@ -60,25 +60,17 @@ footer div.footer_desc h6 {
     letter-spacing: 0.5px;
 }
 
-footer div.footer_desc .social_links {
-    margin: 2rem 0;
-}
-
 footer div.footer_desc .social_links a {
-    margin: auto 2rem auto 0;
-    padding: 1rem;
+    margin: auto;
+    margin-right: 2rem;
     font-size: 2.5rem;
     color: var(--darkwhite);
-    background: var(--lightviolet);
-    border-radius: 50%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 footer div.footer_desc .social_links a:hover {
-    background: var(--lightBg);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    color: var(--lightyellow);
     text-decoration: none;
 }
 
@@ -93,9 +85,6 @@ footer div.footer_desc .social_links a:hover {
 @media (max-width: 992px) {
     footer div.footer_desc img {
         width: 60px;
-    }
-    footer div.footer_desc .social_links a {
-        padding: 0.7rem;
     }
 }
 

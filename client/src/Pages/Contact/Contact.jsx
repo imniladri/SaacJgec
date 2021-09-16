@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import "./Blog.css";
+import "./Contact.css";
 
-function Blog() {
+function Contact() {
     useEffect(() => {
-        document.title = "SAAC | Blog";
+        document.title = "SAAC | Contact";
     }, []);
 
     return (
         <>
             <div className="breadcrumb">
-                <h2>Blog</h2>
+                <h2>Contact</h2>
                 <span></span>
                 <p>How it all begins!</p>
             </div>
@@ -17,4 +17,4 @@ function Blog() {
     );
 }
 
-export default Blog;
+export default Contact;

@@ -5,11 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&display=swap");
 
-/* **************************** Components Stylesheets **************************** */
-
-/* @import url(./header.css); */
-/* @import url(./footer.css); */
-
 /* **************************** Site General Settings **************************** */
 
 * {
@@ -111,9 +106,11 @@ div.breadcrumb {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 8rem auto 4rem;
+    margin: 6rem auto 4rem;
     padding: 10rem 4rem;
-    /* background: url(../../img/space_bg.png) no-repeat 50% 100% / cover; */
+    background: var(--mediumBg)
+        url(https://saacjgec.vercel.app/img/space_bg.png) no-repeat 50% 100% /
+        cover;
 }
 
 div.breadcrumb h2 {
@@ -178,11 +175,11 @@ span.content_divider {
 span.content_divider hr {
     margin: auto 1rem;
     width: 10rem;
-    border-top: 2px dashed var(--mediumviolet);
+    border-top: 3px dashed var(--mediumviolet);
 }
 
-span.content_divider i:before {
-    font-size: 35px;
+span.content_divider svg {
+    font-size: 3.5rem;
     color: var(--mediumviolet);
 }
 
