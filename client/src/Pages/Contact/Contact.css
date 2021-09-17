@@ -3,3 +3,156 @@
 body {
     background: var(--darkwhite);
 }
+
+/* **************************** Contact Contents **************************** */
+
+section#contact div.contact {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* **************************** Contact Image **************************** */
+
+section#contact div.contact_img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#contact div.contact_img img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+/* **************************** Contact Form **************************** */
+
+section#contact div.contact_form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    padding: 0 2rem 2rem;
+    border-radius: 6px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+}
+
+/* Main Form */
+
+form#contact_form {
+    position: relative;
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+form#contact_form .form-group {
+    margin: 2rem auto;
+}
+
+form#contact_form .form-group label {
+    margin: 5px auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: "Roboto Slab", sans-serif;
+    color: var(--lightblack);
+    letter-spacing: 1px;
+}
+
+form#contact_form .form-group label span {
+    font-weight: 700;
+    color: var(--lightred);
+}
+
+form#contact_form .form-group input,
+form#contact_form .form-group textarea {
+    margin: 5px 0;
+    padding: 18px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    color: var(--lightblack);
+    background: transparent;
+    border: 2px solid var(--lightgrey);
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+form#contact_form .form-group input:placeholder-shown,
+form#contact_form .form-group textarea:placeholder-shown {
+    font-weight: 600;
+    color: var(--lightgrey);
+    border: 2px solid var(--lightgrey);
+}
+
+form#contact_form .form-group input:focus,
+form#contact_form .form-group textarea:focus {
+    box-shadow: none;
+    color: var(--lightblack);
+    border: 2px solid var(--lightred);
+}
+
+form#contact_form .form-group input:not(:placeholder-shown):focus,
+form#contact_form .form-group textarea:not(:placeholder-shown):focus {
+    border: 2px solid var(--lightblue);
+}
+
+form#contact_form .form-group input:not(:placeholder-shown):not(:focus),
+form#contact_form .form-group textarea:not(:placeholder-shown):not(:focus) {
+    border: 2px solid var(--lightgreen);
+}
+
+form#contact_form .form-group input:-webkit-autofill,
+form#contact_form .form-group input:-webkit-autofill:hover,
+form#contact_form .form-group input:-webkit-autofill:focus,
+form#contact_form .form-group input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--lightblack);
+    box-shadow: 0 0 0 30px var(--darkwhite) inset;
+}
+
+form#contact_form button.btn-submit {
+    width: 100%;
+    margin: auto 0;
+    padding: 8px 22px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--darkwhite) !important;
+    background: var(--mediumviolet);
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+form#contact_form button.btn-submit:hover {
+    background: var(--darkviolet);
+}
+
+/* **************************** Responsive Media **************************** */
+
+@media (max-width: 992px) {
+    section#contact div.contact {
+        margin: 4rem auto;
+        flex-wrap: wrap;
+    }
+
+    section#contact div.contact_img img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 472px) {
+    section#contact div.contact_form {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+}
+
+/* **************************** Styles End **************************** */

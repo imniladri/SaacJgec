@@ -15,6 +15,8 @@ import Gallery from "./Pages/Gallery/Gallery";
 import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
 
+import Auth from "./Pages/Auth/Auth";
+
 function App() {
     return (
         <>
@@ -29,6 +31,8 @@ function App() {
                 <Route path="/gallery" component={Gallery} />
                 <Route path="/blog" component={Blog} />
                 <Route path="/contact" component={Contact} />
+
+                <Route path="/auth" component={Auth} />
             </Switch>
 
             <Footer />

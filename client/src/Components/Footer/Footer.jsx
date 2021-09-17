@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { Logo } from "../../Assets/Assets";
 import "./Footer.css";
 
 function Footer() {
@@ -8,7 +9,7 @@ function Footer() {
             <footer>
                 <div className="footer_content mx-1">
                     <div className="footer_desc">
-                        <img src="./svg/logo_light.svg" alt="Saac Logo" />
+                        <img src={Logo} alt="Saac Logo" />
                         <h4>
                             Space & Aeronautics Activity Center
                             <br />

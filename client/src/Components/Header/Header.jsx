@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
+import { Logo } from "../../Assets/Assets";
 import HeaderData from "./HeaderData";
 import "./Header.css";
 
@@ -19,7 +20,7 @@ function Header() {
             <header className={isScroll ? "scrolled" : ""}>
                 <nav className="navbar">
                     <a className="navbar-brand" href="https://saac.tech/">
-                        <img src="./svg/logo_light.svg" alt="Saac Logo" />
+                        <img src={Logo} alt="Saac Logo" />
                     </a>
 
                     <button
@@ -53,7 +54,7 @@ function Header() {
                             );
                         })}
                         <NavLink
-                            to="/login"
+                            to="/auth"
                             exact
                             activeClassName="active"
                             className="btn logIn"
@@ -68,7 +69,7 @@ function Header() {
                     </div>
 
                     <NavLink
-                        to="/login"
+                        to="/auth"
                         exact
                         activeClassName="active"
                         className="btn logIn"

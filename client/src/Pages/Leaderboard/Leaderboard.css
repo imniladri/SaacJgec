@@ -141,7 +141,7 @@ section#leaderboard div.event_position .position_card .work {
     z-index: 2;
     background: var(--darkblack);
     clip-path: circle(0% at 50% 80%);
-    transition: all 0.5s ease-in-out;
+    transition: all 1s cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 section#leaderboard div.event_position .position_card .work.active {

@@ -11,7 +11,7 @@ function Gallery() {
             <div className="breadcrumb">
                 <h2>Gallery</h2>
                 <span></span>
-                <p>How it all begins!</p>
+                <p>Our memories till now!</p>
             </div>
         </>
     );

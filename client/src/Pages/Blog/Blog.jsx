@@ -11,7 +11,7 @@ function Blog() {
             <div className="breadcrumb">
                 <h2>Blog</h2>
                 <span></span>
-                <p>How it all begins!</p>
+                <p>All our releases!</p>
             </div>
         </>
     );

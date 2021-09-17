@@ -96,7 +96,7 @@ a.btn:focus {
 
 @font-face {
     font-family: "Aquire";
-    src: url("./Font/Aquire.otf");
+    src: url("./Assets/Font/Aquire.otf");
 }
 
 /* **************************** Breadcrumb **************************** */
@@ -108,9 +108,8 @@ div.breadcrumb {
     flex-direction: column;
     margin: 6rem auto 4rem;
     padding: 10rem 4rem;
-    background: var(--mediumBg)
-        url(https://saacjgec.vercel.app/img/space_bg.png) no-repeat 50% 100% /
-        cover;
+    background: var(--mediumBg) url(./Assets/Icons/SpaceBg.png) no-repeat 50%
+        100% / cover;
 }
 
 div.breadcrumb h2 {
