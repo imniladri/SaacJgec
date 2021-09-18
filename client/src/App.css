@@ -10,6 +10,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -31,6 +32,9 @@ html {
 body {
     background: var(--mediumBg);
     font-family: "Poppins", sans-serif;
+
+    /* For Framer Slide Animation */
+    overflow-x: hidden;
 }
 
 :root {

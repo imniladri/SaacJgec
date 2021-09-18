@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Forget() {
     useEffect(() => {
+        window.scrollTo(0, 0);
         document.title = "SAAC | Forget Password";
     }, []);
 

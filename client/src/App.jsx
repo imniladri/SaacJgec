@@ -1,5 +1,6 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -7,6 +8,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 
+import Banner from "./Pages/Banner/Banner";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Leaderboard from "./Pages/Leaderboard/Leaderboard";
@@ -18,22 +20,26 @@ import Contact from "./Pages/Contact/Contact";
 import Auth from "./Pages/Auth/Auth";
 
 function App() {
+    const location = useLocation();
+
     return (
         <>
             <Header />
 
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/home" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/leaderboard" component={Leaderboard} />
-                <Route path="/projects" component={Projects} />
-                <Route path="/gallery" component={Gallery} />
-                <Route path="/blog" component={Blog} />
-                <Route path="/contact" component={Contact} />
+            <AnimatePresence exitBeforeEnter>
+                <Switch location={location} key={location.pathname}>
+                    <Route exact path="/" component={Banner} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route path="/leaderboard" component={Leaderboard} />
+                    <Route path="/projects" component={Projects} />
+                    <Route path="/gallery" component={Gallery} />
+                    <Route path="/blog" component={Blog} />
+                    <Route path="/contact" component={Contact} />
 
-                <Route path="/auth" component={Auth} />
-            </Switch>
+                    <Route path="/auth" component={Auth} />
+                </Switch>
+            </AnimatePresence>
 
             <Footer />
         </>

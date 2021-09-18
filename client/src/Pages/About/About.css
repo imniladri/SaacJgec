@@ -51,7 +51,7 @@ section#about div.about span {
 }
 
 section#about div.about blockquote {
-    margin: 0 0 -3rem 1rem;
+    margin: 1rem;
     padding: 1rem;
     font-size: 2rem;
     font-weight: 400;

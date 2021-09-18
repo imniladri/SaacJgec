@@ -1,0 +1,160 @@
+/* **************************** Banner Comp Styles **************************** */
+
+section#banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--darkBg) url(../../Assets/Icons/SpaceBg.png) fixed
+        no-repeat 50% 50% / 100%;
+    z-index: 10;
+}
+
+@media (max-width: 992px) {
+    section#banner {
+        background-size: cover;
+    }
+}
+
+/* **************************** Particles JS **************************** */
+
+section#banner div#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* **************************** Banner Content **************************** */
+
+section#banner div.content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-10%);
+}
+
+section#banner div.content h2 {
+    font-size: 18rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    color: var(--darkwhite);
+    text-align: center;
+    clip-path: inset(0 100% 0 0);
+    transition: all 1s ease;
+}
+
+section#banner div.content h4 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--darkwhite);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    clip-path: inset(0 0 0 100%);
+    transition: all 1s ease;
+}
+
+section#banner div.content.reveal h2,
+section#banner div.content.reveal h4 {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Banner Content Responsive */
+@media (max-width: 992px) {
+    section#banner div.content h2 {
+        font-size: 12rem;
+    }
+    section#banner div.content h4 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 472px) {
+    section#banner div.content h2 {
+        font-size: 8rem;
+    }
+    section#banner div.content h4 {
+        padding: 0 6rem;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+}
+
+/* **************************** Banner Switch **************************** */
+
+section#banner div.switch {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+section#banner div.switch.reveal {
+    transform: translateX(-50%) scale(1);
+}
+
+section#banner div.switch a.btn_explore {
+    margin: 1rem auto;
+    padding: 0.6rem 1.6rem;
+    color: var(--darkwhite);
+    background: var(--lightred);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+section#banner div.switch a.btn_explore:hover {
+    background: rgba(255, 0, 85, 0.8);
+}
+
+section#banner div.switch a.btn_explore span {
+    margin: auto 0.5rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Aquire", "Poppins", sans-serif;
+    letter-spacing: 1px;
+    transform: translateY(0);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+section#banner div.switch a.btn_explore svg {
+    position: absolute;
+    margin: auto 0.5rem;
+    font-size: 3.5rem;
+    transform: scale(0);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+section#banner div.switch a.btn_explore:hover span {
+    transform: translateY(-100%);
+}
+
+section#banner div.switch a.btn_explore:hover svg {
+    transform: scale(1);
+}
+
+/* Banner Switch Responsive */
+@media (max-width: 992px) {
+    section#banner div.switch a.btn_explore {
+        padding: 0.5rem 1.5rem;
+    }
+
+    section#banner div.switch a.btn_explore span,
+    section#banner div.switch a.btn_explore svg {
+        font-size: 2.5rem;
+    }
+}
+
+/* **************************** Styles End **************************** */

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import { BiLogOutCircle } from "react-icons/bi";
 import { Logo, AuthImg } from "../../Assets/Assets";
@@ -10,6 +10,10 @@ import Forget from "./Forget";
 
 function Auth() {
     const history = useHistory();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
     useEffect(() => {
+        window.scrollTo(0, 0);
         document.title = "SAAC | Log In";
     }, []);
 
