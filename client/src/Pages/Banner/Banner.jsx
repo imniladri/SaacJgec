@@ -10,9 +10,9 @@ function Banner() {
     useEffect(() => {
         window.scrollTo(0, 0);
         document.title = "Space & Aeronautics Activity Center";
-        window.addEventListener("load", () => {
+        setTimeout(() => {
             setisLoad(!false);
-        });
+        }, 1000);
     }, []);
 
     return (
