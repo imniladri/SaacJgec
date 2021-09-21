@@ -1,1 +1,1 @@
-# SAAC JGEC - REACT Version
+# SAAC JGEC - Client
