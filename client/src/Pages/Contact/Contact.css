@@ -7,7 +7,7 @@ body {
 /* **************************** Contact Contents **************************** */
 
 section#contact div.contact {
-    margin: auto;
+    margin: 1rem auto 3rem;
     position: relative;
     display: flex;
     justify-content: center;

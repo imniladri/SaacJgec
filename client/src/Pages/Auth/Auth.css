@@ -7,18 +7,16 @@ body {
 /* **************************** Authentication Image **************************** */
 
 section.auth div.auth_img {
-    position: sticky;
-    top: 10%;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--lightBg);
+    height: auto;
+    background: var(--mediumBg);
 }
 
 section.auth div.auth_img img {
+    position: sticky;
+    top: 10%;
+    left: 0;
     margin: auto;
     width: 100%;
     height: auto;
@@ -28,7 +26,7 @@ section.auth div.auth_img img {
 
 section.auth div.auth_desc {
     margin: 8rem auto;
-    padding: 4rem 10rem;
+    padding: 4rem 8rem;
     width: 100%;
     height: 100%;
 }
@@ -101,7 +99,7 @@ form#auth_form .form-group input,
 form#auth_form .form-group select,
 form#auth_form .form-group select option {
     margin: 5px 0;
-    padding: 18px;
+    padding: 18px 10px;
     width: 80%;
     font-size: 1.6rem;
     font-weight: 700;
@@ -199,7 +197,8 @@ form#auth_form a.link-auth:active::after {
 
 form#auth_form.signup .form-group {
     margin: 1rem auto;
-    padding-right: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 form#auth_form.signup .form-group input,
@@ -209,8 +208,9 @@ form#auth_form.signup .form-group select {
 
 form#auth_form.signup .form-group select,
 form#auth_form.signup .form-group select option {
-    padding: 8px;
+    padding: 5px;
     outline: none;
+    height: 4rem;
 }
 
 form#auth_form.signup .form-group select:hover {
@@ -230,7 +230,7 @@ form#auth_form.signup .form-group select option {
 }
 
 form#auth_form.signup button.btn-auth {
-    margin: 3rem 0 2rem;
+    margin: 3rem 1rem 2rem;
 }
 
 /* **************************** Responsive Media **************************** */
@@ -251,12 +251,27 @@ form#auth_form.signup button.btn-auth {
     section.auth div.auth_img {
         display: none;
     }
+
+    form#auth_form.signup .form-group select,
+    form#auth_form.signup .form-group select option {
+        height: 4.5rem;
+    }
 }
 
-@media (max-width: 372px) {
+@media (max-width: 472px) {
+    section.auth div.auth_desc {
+        padding: 4rem 2rem;
+    }
+
     form#auth_form a.link-auth {
         display: table;
         margin: 2rem 0 0;
+    }
+}
+
+@media (max-width: 372px) {
+    header nav button.goBack span {
+        display: none;
     }
 }
 

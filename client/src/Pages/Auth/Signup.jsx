@@ -99,6 +99,7 @@ function Signup() {
                                 className="form-select"
                                 id="specialist"
                                 name="Specialist"
+                                required
                             >
                                 <option value="astrodynamics">
                                     Astrodynamics
@@ -156,14 +157,18 @@ function Signup() {
                             <label htmlFor="year">
                                 Year of Study <span>*</span>
                             </label>
-                            <input
-                                type="text"
+                            <select
                                 id="year"
                                 name="Year"
                                 className="form-control"
-                                placeholder=" "
                                 required
-                            />
+                            >
+                                <option value="1st">1st</option>
+                                <option value="2nd">2nd</option>
+                                <option value="3rd">3rd</option>
+                                <option value="4th">4th</option>
+                                <option value="5th">5th</option>
+                            </select>
                         </div>
                     </div>
 

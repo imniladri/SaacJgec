@@ -1,0 +1,119 @@
+/* **************************** Error Comp Styles **************************** */
+
+body {
+    background: var(--darkwhite);
+}
+
+/* **************************** Error Content **************************** */
+
+section#error {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--darkBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+section#error::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../Assets/Icons/SpacePattern.png);
+    background-size: contain;
+    box-shadow: inset 0 0 10px 30px var(--darkBg);
+    opacity: 0.05;
+}
+
+div.error {
+    margin: 5rem auto;
+    padding: 2rem 12rem;
+    background: var(--lightwhite);
+    border-radius: 42% 58% 63% 37% / 53% 68% 32% 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+div.error object {
+    margin: -2rem auto;
+    width: auto;
+    height: auto;
+}
+
+div.error h4 {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--lightBg);
+    text-align: center;
+}
+
+div.error p {
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    color: var(--lightBg);
+    text-align: center;
+}
+
+div.error a.btn {
+    margin: 1rem auto 2rem;
+    padding: 0.8rem 1.6rem;
+    color: var(--darkwhite);
+    background: var(--lightBg);
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+div.error a.btn span {
+    margin: auto;
+    margin-left: 2px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+}
+
+div.error a.btn svg {
+    margin: auto;
+    margin-right: 2px;
+    font-size: 2rem;
+}
+
+div.error a.btn:hover {
+    background: var(--darkBg);
+}
+
+@media (max-width: 576px) {
+    div.error {
+        margin: 1rem;
+        padding: 2rem 6rem;
+    }
+
+    div.error h4 {
+        font-size: 2rem;
+    }
+    div.error a span {
+        font-size: 1.4rem;
+    }
+    div.error a svg {
+        font-size: 1.6rem;
+    }
+}
+
+/* **************************** Styles End **************************** */

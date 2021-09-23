@@ -7,13 +7,13 @@ header {
     width: 100%;
     padding: 1.5rem 8rem;
     z-index: 10;
-    background: var(--lightBg);
+    background: var(--mediumBg);
     transition: all 0.2s ease;
 }
 
 header.scrolled {
     padding: 1rem 4rem;
-    box-shadow: 5px 0 10px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 0 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* **************************** Navbar Brand Image **************************** */
@@ -116,7 +116,7 @@ header nav div.desktop_nav a.nav_link.active:hover {
         transform: translate(0, 15%);
         width: 100%;
         flex-direction: column;
-        background: var(--lightBg);
+        background: var(--mediumBg);
         clip-path: inset(0 0 100% 0);
         transition: all 0.4s ease;
     }
@@ -224,7 +224,7 @@ button.menu_btn.active span.menu_icon:after {
     }
 
     header nav div.desktop_nav a.nav_link {
-        margin: 0.4rem 0.8rem;
+        margin: 0.6rem 0.8rem;
         width: 100%;
         text-align: left;
     }

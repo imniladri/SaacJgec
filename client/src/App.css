@@ -146,7 +146,7 @@ div.breadcrumb p {
 
 @media (max-width: 768px) {
     div.breadcrumb {
-        padding: 4rem 4rem 6rem;
+        padding: 6rem 4rem;
     }
 }
 @media (max-width: 472px) {

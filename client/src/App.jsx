@@ -18,6 +18,7 @@ import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
 
 import Auth from "./Pages/Auth/Auth";
+import Error from "./Pages/Error/Error";
 
 function App() {
     const location = useLocation();
@@ -38,6 +39,8 @@ function App() {
                     <Route path="/contact" component={Contact} />
 
                     <Route path="/auth" component={Auth} />
+
+                    <Route component={Error} />
                 </Switch>
             </AnimatePresence>
 

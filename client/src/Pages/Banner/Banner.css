@@ -157,4 +157,13 @@ section#banner div.switch a.btn_explore:hover svg {
     }
 }
 
+@media (max-width: 768px) {
+    section#banner div.content {
+        transform: translateY(-15%);
+    }
+    section#banner div.switch {
+        bottom: 20%;
+    }
+}
+
 /* **************************** Styles End **************************** */
