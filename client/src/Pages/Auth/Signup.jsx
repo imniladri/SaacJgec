@@ -1,7 +1,57 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
+const formSchema = Yup.object({
+    fname: Yup.string().required("First Name is required!"),
+    lname: Yup.string().required("Last Name is required!"),
+    email: Yup.string()
+        .email("Invalid Email Id")
+        .required("Email Id is required!"),
+    pass: Yup.string()
+        .min(8, "Password should be atleast 8 characters!")
+        .required("Create a password for your account!"),
+    spec: Yup.string().required("Specialist is required!"),
+    inst: Yup.string().required("Institute/Workplace is required!"),
+    dept: Yup.string().required("Department is required!"),
+    occu: Yup.string().required("Occupation is required!"),
+    cont: Yup.number()
+        .typeError("Must be a number!")
+        .integer("Must be a integer!")
+        .positive("Should be positive!")
+        .min(10, "Enter a Valid Phone Number!")
+        .max(10, "Enter a Valid Phone Number!")
+        .required("Contact Number is required!"),
+
+    //  Regx Expression for Phone Number
+    /*
+        phone: Yup.string()
+        .matches(
+            /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+            "Not a Phone number"
+        )
+        .required("Required"),
+    */
+});
 
 function Signup() {
+    const formik = useFormik({
+        initialValues: {
+            fname: "",
+            lname: "",
+            email: "",
+            pass: "",
+            spec: "",
+            inst: "",
+            dept: "",
+            occu: "",
+            cont: "",
+        },
+        onSubmit: async () => {},
+        validationSchema: formSchema,
+    });
+
     useEffect(() => {
         window.scrollTo(0, 0);
         document.title = "SAAC | Sign Up";
@@ -12,7 +62,7 @@ function Signup() {
             <div className="auth_desc col-md-7">
                 <h2>Sign Up</h2>
 
-                <div className="my-4">
+                <div className="my-4 px-3">
                     <h4>SAAC</h4>
                     <p>
                         Creating a society where students are given a platform
@@ -27,21 +77,32 @@ function Signup() {
 
                 <hr />
 
-                <form id="auth_form" className="signup">
+                <form
+                    id="auth_form"
+                    className="signup"
+                    onSubmit={formik.handleSubmit}
+                >
                     {/* Name */}
-                    <div className="form-row">
+                    <div className="form-row mx-0">
                         <div className="form-group col-sm-6">
                             <label htmlFor="fname">
                                 First Name <span>*</span>
                             </label>
                             <input
+                                value={formik.values.fname}
+                                onChange={formik.handleChange("fname")}
+                                onBlur={formik.handleBlur("fname")}
                                 type="text"
                                 id="fname"
                                 name="FName"
-                                className="form-control"
                                 placeholder=" "
-                                required
+                                className={`form-control ${
+                                    formik.touched.fname && formik.errors.fname
+                                        ? "invalid"
+                                        : ""
+                                }`}
                             />
+                            <p>{formik.touched.fname && formik.errors.fname}</p>
                         </div>
 
                         <div className="form-group col-sm-6">
@@ -49,13 +110,20 @@ function Signup() {
                                 Last Name <span>*</span>
                             </label>
                             <input
+                                value={formik.values.lname}
+                                onChange={formik.handleChange("lname")}
+                                onBlur={formik.handleBlur("lname")}
                                 type="text"
                                 id="lname"
                                 name="LName"
-                                className="form-control"
                                 placeholder=" "
-                                required
+                                className={`form-control ${
+                                    formik.touched.lname && formik.errors.lname
+                                        ? "invalid"
+                                        : ""
+                                }`}
                             />
+                            <p>{formik.touched.lname && formik.errors.lname}</p>
                         </div>
                     </div>
 
@@ -65,42 +133,63 @@ function Signup() {
                             Email Id <span>*</span>
                         </label>
                         <input
+                            value={formik.values.email}
+                            onChange={formik.handleChange("email")}
+                            onBlur={formik.handleBlur("email")}
                             type="email"
                             id="email"
                             name="Email"
-                            className="form-control"
                             placeholder=" "
-                            required
+                            className={`form-control ${
+                                formik.touched.email && formik.errors.email
+                                    ? "invalid"
+                                    : ""
+                            }`}
                         />
+                        <p>{formik.touched.email && formik.errors.email}</p>
                     </div>
 
-                    <div className="form-row">
-                        {/* DOB */}
+                    <div className="form-row mx-0">
+                        {/* Occupation */}
                         <div className="form-group col-sm-6">
-                            <label htmlFor="dob">
-                                DOB <span>*</span>
+                            <label htmlFor="occu">
+                                Occupation <span>*</span>
                             </label>
                             <input
-                                type="date"
-                                id="dob"
-                                name="DOB"
-                                className="form-control"
+                                value={formik.values.occu}
+                                onChange={formik.handleChange("occu")}
+                                onBlur={formik.handleBlur("occu")}
+                                type="text"
+                                id="occu"
+                                name="Occupation"
                                 placeholder=" "
-                                required
+                                className={`form-control ${
+                                    formik.touched.occu && formik.errors.occu
+                                        ? "invalid"
+                                        : ""
+                                }`}
                             />
+                            <p>{formik.touched.occu && formik.errors.occu}</p>
                         </div>
 
-                        {/* OptionGrp */}
+                        {/* Specialist */}
                         <div className="form-group col-sm-6">
-                            <label htmlFor="specialist">
+                            <label htmlFor="spec">
                                 Specialist <span>*</span>
                             </label>
                             <select
-                                className="form-select"
-                                id="specialist"
+                                value={formik.values.spec}
+                                onChange={formik.handleChange("spec")}
+                                onBlur={formik.handleBlur("spec")}
+                                id="spec"
                                 name="Specialist"
-                                required
+                                className={`form-control ${
+                                    formik.touched.spec && formik.errors.spec
+                                        ? "invalid"
+                                        : ""
+                                }`}
                             >
+                                <option></option>
                                 <option value="astrodynamics">
                                     Astrodynamics
                                 </option>
@@ -119,87 +208,75 @@ function Signup() {
                                     Fuel & Energy
                                 </option>
                             </select>
+                            <p>{formik.touched.spec && formik.errors.spec}</p>
                         </div>
                     </div>
 
                     {/* Institute */}
                     <div className="form-group">
                         <label htmlFor="inst">
-                            Institution Name <span>*</span>
+                            Institution / Workplace <span>*</span>
                         </label>
                         <input
+                            value={formik.values.inst}
+                            onChange={formik.handleChange("inst")}
+                            onBlur={formik.handleBlur("inst")}
                             type="text"
                             id="inst"
-                            name="Inst"
-                            className="form-control"
+                            name="Institution"
                             placeholder=" "
-                            required
+                            className={`form-control ${
+                                formik.touched.inst && formik.errors.inst
+                                    ? "invalid"
+                                    : ""
+                            }`}
                         />
+                        <p>{formik.touched.inst && formik.errors.inst}</p>
                     </div>
 
-                    {/* Department & Year */}
-                    <div className="form-row">
+                    <div className="form-row mx-0">
+                        {/* Department */}
                         <div className="form-group col-sm-6">
                             <label htmlFor="dept">
                                 Department <span>*</span>
                             </label>
                             <input
+                                value={formik.values.dept}
+                                onChange={formik.handleChange("dept")}
+                                onBlur={formik.handleBlur("dept")}
                                 type="text"
                                 id="dept"
-                                name="Dept"
-                                className="form-control"
+                                name="Department"
                                 placeholder=" "
-                                required
+                                className={`form-control ${
+                                    formik.touched.dept && formik.errors.dept
+                                        ? "invalid"
+                                        : ""
+                                }`}
                             />
+                            <p>{formik.touched.dept && formik.errors.dept}</p>
                         </div>
 
+                        {/* Contact Number */}
                         <div className="form-group col-sm-6">
-                            <label htmlFor="year">
-                                Year of Study <span>*</span>
-                            </label>
-                            <select
-                                id="year"
-                                name="Year"
-                                className="form-control"
-                                required
-                            >
-                                <option value="1st">1st</option>
-                                <option value="2nd">2nd</option>
-                                <option value="3rd">3rd</option>
-                                <option value="4th">4th</option>
-                                <option value="5th">5th</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    {/* Contact Number */}
-                    <div className="form-row">
-                        <div className="form-group col-sm-6">
-                            <label htmlFor="mob">
-                                Mobile No. <span>*</span>
+                            <label htmlFor="cont">
+                                Contact No. <span>*</span>
                             </label>
                             <input
+                                value={formik.values.cont}
+                                onChange={formik.handleChange("cont")}
+                                onBlur={formik.handleBlur("cont")}
                                 type="text"
-                                id="mob"
-                                name="Mob"
-                                className="form-control"
+                                id="cont"
+                                name="Contact"
                                 placeholder=" "
-                                required
+                                className={`form-control ${
+                                    formik.touched.cont && formik.errors.cont
+                                        ? "invalid"
+                                        : ""
+                                }`}
                             />
-                        </div>
-
-                        <div className="form-group col-sm-6">
-                            <label htmlFor="wapp">
-                                Whatsapp No. <span>*</span>
-                            </label>
-                            <input
-                                type="text"
-                                id="wapp"
-                                name="Wapp"
-                                className="form-control"
-                                placeholder=" "
-                                required
-                            />
+                            <p>{formik.touched.cont && formik.errors.cont}</p>
                         </div>
                     </div>
 
@@ -209,13 +286,20 @@ function Signup() {
                             Password <span>*</span>
                         </label>
                         <input
+                            value={formik.values.pass}
+                            onChange={formik.handleChange("pass")}
+                            onBlur={formik.handleBlur("pass")}
                             type="password"
                             id="pass"
                             name="Password"
-                            className="form-control"
                             placeholder=" "
-                            required
+                            className={`form-control ${
+                                formik.touched.pass && formik.errors.pass
+                                    ? "invalid"
+                                    : ""
+                            }`}
                         />
+                        <p>{formik.touched.pass && formik.errors.pass}</p>
                     </div>
 
                     <button type="submit" className="btn btn-auth">

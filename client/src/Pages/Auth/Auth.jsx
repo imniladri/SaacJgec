@@ -8,6 +8,9 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Forget from "./Forget";
 
+import Reset from "./Reset";
+import Verify from "./Verify";
+
 function Auth() {
     const history = useHistory();
 
@@ -41,6 +44,9 @@ function Auth() {
                         <Route path="/auth/login" component={Login} />
                         <Route path="/auth/signup" component={Signup} />
                         <Route path="/auth/forget" component={Forget} />
+
+                        <Route path="/auth/reset" component={Reset} />
+                        <Route path="/auth/verify" component={Verify} />
                     </Switch>
                 </div>
             </section>

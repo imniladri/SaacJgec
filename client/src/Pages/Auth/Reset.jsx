@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const formSchema = Yup.object({
-    email: Yup.string()
-        .email("Invalid Email Id")
-        .required("Enter Your Email Id!"),
-    pass: Yup.string().required("Enter Your Password!"),
+    pass: Yup.string()
+        .min(8, "Password should be atleast 8 characters!")
+        .required("Set a new password for your account!"),
+    confpass: Yup.string()
+        .oneOf([Yup.ref("pass"), null], "Password didn't matched!")
+        .required("Confirm your new password!"),
 });
 
-function Login() {
+function Reset() {
     const formik = useFormik({
         initialValues: {
-            email: "",
             pass: "",
+            confpass: "",
         },
         onSubmit: async () => {},
         validationSchema: formSchema,
@@ -22,13 +23,13 @@ function Login() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        document.title = "SAAC | Log In";
+        document.title = "SAAC | Reset Password";
     }, []);
 
     return (
         <>
             <div className="auth_desc col-md-7">
-                <h2>Log In</h2>
+                <h2>Reset Password</h2>
 
                 <div className="my-4">
                     <h4>SAAC</h4>
@@ -47,33 +48,13 @@ function Login() {
 
                 <form
                     id="auth_form"
-                    className="login"
+                    className="reset"
                     onSubmit={formik.handleSubmit}
                 >
-                    <div className="form-group">
-                        <label htmlFor="email">
-                            Email Id <span>*</span>
-                        </label>
-                        <input
-                            value={formik.values.email}
-                            onChange={formik.handleChange("email")}
-                            onBlur={formik.handleBlur("email")}
-                            type="email"
-                            id="email"
-                            name="Email"
-                            placeholder=" "
-                            className={`form-control ${
-                                formik.touched.email && formik.errors.email
-                                    ? "invalid"
-                                    : ""
-                            }`}
-                        />
-                        <p>{formik.touched.email && formik.errors.email}</p>
-                    </div>
-
+                    {/* New Password */}
                     <div className="form-group">
                         <label htmlFor="pass">
-                            Password <span>*</span>
+                            New Password <span>*</span>
                         </label>
                         <input
                             value={formik.values.pass}
@@ -92,22 +73,38 @@ function Login() {
                         <p>{formik.touched.pass && formik.errors.pass}</p>
                     </div>
 
-                    <button type="submit" className="btn btn-auth">
-                        Login
-                    </button>
-
+                    {/* Confirm Password */}
                     <div className="form-group">
-                        <Link to="/auth/signup" className="link-auth">
-                            Create Account
-                        </Link>
-                        <Link to="/auth/forget" className="link-auth">
-                            Forget Password?
-                        </Link>
+                        <label htmlFor="confpass">
+                            Confirm Password <span>*</span>
+                        </label>
+                        <input
+                            value={formik.values.confpass}
+                            onChange={formik.handleChange("confpass")}
+                            onBlur={formik.handleBlur("confpass")}
+                            type="password"
+                            id="confpass"
+                            name="Confirm Password"
+                            placeholder=" "
+                            className={`form-control ${
+                                formik.touched.confpass &&
+                                formik.errors.confpass
+                                    ? "invalid"
+                                    : ""
+                            }`}
+                        />
+                        <p>
+                            {formik.touched.confpass && formik.errors.confpass}
+                        </p>
                     </div>
+
+                    <button type="submit" className="btn btn-auth">
+                        Reset
+                    </button>
                 </form>
             </div>
         </>
     );
 }
 
-export default Login;
+export default Reset;

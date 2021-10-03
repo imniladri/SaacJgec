@@ -1,7 +1,23 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
+const formSchema = Yup.object({
+    email: Yup.string()
+        .email("Invalid Email Id")
+        .required("Enter your registered Email Id!"),
+});
 
 function Forget() {
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+        },
+        onSubmit: async () => {},
+        validationSchema: formSchema,
+    });
+
     useEffect(() => {
         window.scrollTo(0, 0);
         document.title = "SAAC | Forget Password";
@@ -27,23 +43,34 @@ function Forget() {
 
                 <hr />
 
-                <form id="auth_form" className="forget">
+                <form
+                    id="auth_form"
+                    className="forget"
+                    onSubmit={formik.handleSubmit}
+                >
                     <div className="form-group">
                         <label htmlFor="email">
                             Email Id <span>*</span>
                         </label>
                         <input
+                            value={formik.values.email}
+                            onChange={formik.handleChange("email")}
+                            onBlur={formik.handleBlur("email")}
                             type="email"
                             id="email"
                             name="Email"
-                            className="form-control"
                             placeholder=" "
-                            required
+                            className={`form-control ${
+                                formik.touched.email && formik.errors.email
+                                    ? "invalid"
+                                    : ""
+                            }`}
                         />
+                        <p>{formik.touched.email && formik.errors.email}</p>
                     </div>
 
                     <button type="submit" className="btn btn-auth">
-                        Reset
+                        Change
                     </button>
 
                     <div className="form-group">

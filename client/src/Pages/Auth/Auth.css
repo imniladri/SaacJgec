@@ -32,7 +32,7 @@ section.auth div.auth_desc {
 }
 
 section.auth div.auth_desc h2 {
-    margin: 1rem auto 2rem;
+    margin: 1rem 0 2rem;
     font-size: 4rem;
     font-weight: 700;
     font-family: "Aquire", "Poppins", sans-serif;
@@ -65,7 +65,7 @@ section.auth div.auth_desc p span {
 }
 
 section.auth div.auth_desc hr {
-    margin: 1rem 0;
+    margin: 1rem;
     width: 80%;
     border-top: 2px solid var(--lightgrey);
 }
@@ -95,6 +95,15 @@ form#auth_form .form-group label span {
     color: var(--lightred);
 }
 
+form#auth_form .form-group p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+    color: var(--lightpink);
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
 form#auth_form .form-group input,
 form#auth_form .form-group select,
 form#auth_form .form-group select option {
@@ -109,7 +118,7 @@ form#auth_form .form-group select option {
     border: 2px solid var(--lightgrey);
     letter-spacing: 1px;
     border-radius: 4px;
-    box-shadow: none;
+    box-shadow: none !important;
     transition: all 0.2s ease;
 }
 
@@ -120,9 +129,12 @@ form#auth_form .form-group input:placeholder-shown {
 }
 
 form#auth_form .form-group input:focus {
-    box-shadow: none;
     color: var(--lightblack);
     border: 2px solid var(--lightred);
+}
+
+form#auth_form .form-group input.invalid {
+    border: 2px solid var(--lightpink);
 }
 
 form#auth_form .form-group input:not(:placeholder-shown):focus {
@@ -138,7 +150,7 @@ form#auth_form .form-group input:-webkit-autofill:hover,
 form#auth_form .form-group input:-webkit-autofill:focus,
 form#auth_form .form-group input:-webkit-autofill:active {
     -webkit-text-fill-color: var(--lightblack);
-    box-shadow: 0 0 0 30px var(--darkwhite) inset;
+    box-shadow: 0 0 0 30px var(--darkwhite) inset !important;
 }
 
 form#auth_form button.btn-auth {
@@ -213,16 +225,16 @@ form#auth_form.signup .form-group select option {
     height: 4rem;
 }
 
-form#auth_form.signup .form-group select:hover {
-    border: 2px solid var(--lightred);
+form#auth_form.signup .form-group select.invalid {
+    border: 2px solid var(--lightpink) !important;
 }
 
 form#auth_form.signup .form-group select:focus {
     border: 2px solid var(--lightblue);
 }
 
-form#auth_form.signup .form-group select:not(:hover) {
-    border: 2px solid var(--lightgreen);
+form#auth_form.signup .form-group select:not(:focus) {
+    border: 2px solid var(--lightgrey);
 }
 
 form#auth_form.signup .form-group select option {
@@ -273,6 +285,86 @@ form#auth_form.signup button.btn-auth {
     header nav button.goBack span {
         display: none;
     }
+}
+
+/* **************************** Verification **************************** */
+
+section#verify {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--darkwhite);
+    z-index: 10;
+}
+
+section#verify div.verify {
+    position: relative;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+section#verify div.verify .verify_icons {
+    position: relative;
+    margin: auto;
+    padding: 3rem;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#verify div.verify .verify_icons svg {
+    font-size: 8rem;
+    color: var(--lightblack);
+}
+
+section#verify div.verify .verify_icons span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    animation: spin 5s linear infinite;
+}
+
+section#verify div.verify .verify_icons span svg {
+    font-size: 3.5rem;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+section#verify div.verify h2 {
+    margin: 3rem auto;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--lightblack);
+    text-align: center;
+}
+
+section#verify div.verify p {
+    margin: 2rem auto;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    color: var(--darkgrey);
+    text-align: center;
+}
+
+section#verify div.verify p i {
+    color: var(--mediumviolet);
 }
 
 /* **************************** Styles End **************************** */
