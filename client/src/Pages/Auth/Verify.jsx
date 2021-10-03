@@ -1,8 +1,20 @@
 import React, { useEffect } from "react";
-import { IoRocketOutline, IoMailOutline } from "react-icons/io5";
+import Lottie from "react-lottie";
+import { IoRocketOutline } from "react-icons/io5";
 import "./Auth.css";
 
+import { VerifyIcon } from "../../Assets/Assets";
+
 function Verify() {
+    const lottieSettings = {
+        loop: true,
+        autoplay: true,
+        animationData: VerifyIcon,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice",
+        },
+    };
+
     useEffect(() => {
         window.scrollTo(0, 0);
         document.title = "SAAC | Verification";
@@ -13,7 +25,14 @@ function Verify() {
             <section id="verify">
                 <div className="verify">
                     <div className="verify_icons">
-                        <IoMailOutline />
+                        <Lottie
+                            className="verify_lottie"
+                            options={lottieSettings}
+                            height="30%"
+                            width="30%"
+                            isStopped={false}
+                            isPaused={false}
+                        />
                         <span>
                             <IoRocketOutline />
                         </span>

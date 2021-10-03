@@ -308,21 +308,16 @@ section#verify div.verify {
 section#verify div.verify .verify_icons {
     position: relative;
     margin: auto;
-    padding: 3rem;
+    padding: 2rem;
     width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section#verify div.verify .verify_icons svg {
-    font-size: 8rem;
-    color: var(--lightblack);
-}
-
 section#verify div.verify .verify_icons span {
     position: absolute;
-    width: 100%;
+    width: 35%;
     height: 100%;
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.05);
@@ -331,8 +326,9 @@ section#verify div.verify .verify_icons span {
 
 section#verify div.verify .verify_icons span svg {
     font-size: 3.5rem;
+    color: var(--lightblack);
     position: absolute;
-    top: 4px;
+    top: 18px;
     left: 0;
 }
 
